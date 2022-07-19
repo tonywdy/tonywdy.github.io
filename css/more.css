@@ -1,0 +1,122 @@
+/* 自定义鼠标样式 */
+body {
+    cursor: url(https://gitlab.com/KINGWDY/tgbb/raw/48375373275eca623dc5b197ad81f9fc4b0a46c7/cur/%E6%AD%A3%E5%B8%B8%E9%80%89%E6%8B%A9.cur),
+        default;
+}
+a,
+img {
+    cursor: url(https://gitlab.com/KINGWDY/tgbb/raw/main/cur/%E5%80%99%E9%80%89.cur),
+        default;
+}
+
+/* 页脚footer */
+/* 渐变色滚动动画 */
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+#footer {
+    background: linear-gradient(-45deg, #ee7752, #ce3e75, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 10s ease infinite;
+    -moz-animation: Gradient 10s ease infinite;
+    animation: Gradient 10s ease infinite;
+    -o-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#footer:before {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #49b1f5;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #49b1f5;
+}
+
+.read-mode{
+    /* 字体大小 */
+    font-size:17px;
+    /* 可以在这里引入自定义字体，具体方法请自行百度css引入字体 */
+}
+.read-mode #web_bg{
+    /* 背景颜色 */
+    background:#fdf6e3;
+}
+
+/* 黑色代码块美化 */
+#article-container figure.highlight,#article-container pre{color:#f8f8f2;background:#696969}#article-container figure.highlight .highlight-tools{background:#3f3f3f;color:#fff}#article-container figure.highlight .gutter pre{color:#d3d3d3;background:grey}#article-container figure.highlight figcaption a{color:#a9a9a9!important}
+
+/* linkcss */
+@keyframes link_custom{from{box-shadow:0 0 5px var(--primary-color,grey),inset 0 0 5px var(--primary-color,grey),0 1px 0 var(--primary-color,grey)}to{box-shadow:0 0 20px var(--primary-color,grey),inset 0 0 10px var(--primary-color,grey),0 1px 0 var(--primary-color,grey)}}@keyframes link_custom1{0%{box-shadow:0 0 4px #ca00ff}25%{box-shadow:0 0 16px #00b5e5}50%{box-shadow:0 0 4px #00f}75%{box-shadow:0 0 16px #b1da21}100%{box-shadow:0 0 4px red}}@keyframes flash{from{border-color:transparent}to{border-color:var(--primary-color,grey)}}@keyframes auto_rotate_left{from{transform:rotate(0)}to{transform:rotate(-360deg)}}@keyframes auto_rotate_right{from{transform:rotate(0)}to{transform:rotate(360deg)}}.flink#article-container .post-cards .md-links>.md-links-item a:hover{color:#fff}.flink .post-cards .md-links>.md-links-item a{color:var(--primary-color,#49b1f5);text-decoration:none}.flink .post-cards .md-links>.md-links-item:hover{box-shadow:0 2px 20px var(--primary-color,#49b1f5);animation-play-state:paused}.flink#article-container .post-cards .md-links>.md-links-item:before{background:var(--primary-color,#49b1f5)}.flink .post-cards .md-links>.md-links-item{border:0 solid var(--primary-color,#49b1f5)}.flink#article-container .post-cards .md-links>.md-links-item:hover img{-webkit-transform:rotate(var(--primary-rotate));-moz-transform:rotate(var(--primary-rotate));-o-transform:rotate(var(--primary-rotate));-ms-transform:rotate(var(--primary-rotate));transform:rotate(var(--primary-rotate))}.flink#article-container .post-cards .md-links>.md-links-item a .lauto{animation:auto_rotate_left var(--autotime) linear infinite}.flink#article-container .post-cards .md-links>.md-links-item a .rauto{animation:auto_rotate_right var(--autotime) linear infinite}.flink#article-container .post-cards .md-links>.md-links-item .customcolor{color:var(--namecolor,#1f2d3d)}.flink#article-container .post-cards .md-links>.md-links-item .customcolor:hover{color:#fff}
