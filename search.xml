@@ -7808,6 +7808,28 @@ SAONotify("secret","旅行者，告诉你个秘密，其实，小青是个......
       </tags>
   </entry>
   <entry>
+    <title>npm和cnpm相互切换</title>
+    <url>/2022/07/19/npm%E5%92%8Ccnpm%E7%9B%B8%E4%BA%92%E5%88%87%E6%8D%A2/</url>
+    <content><![CDATA[<h1 id="当需要使用淘宝镜像时也就是所谓的npm切换至cnpm步骤如下："><a href="#当需要使用淘宝镜像时也就是所谓的npm切换至cnpm步骤如下：" class="headerlink" title="当需要使用淘宝镜像时也就是所谓的npm切换至cnpm步骤如下："></a>当需要使用淘宝镜像时也就是所谓的npm切换至cnpm步骤如下：</h1><h2 id="npm–-gt-cnpm"><a href="#npm–-gt-cnpm" class="headerlink" title="npm–&gt;cnpm"></a>npm–&gt;cnpm</h2><p>终端输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<p>建议测试下是否切换成功，可以运用下方命令测试:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+<p>成功的话会显示:<code>https://registry.npm.taobao.org/</code></p>
+<h2 id="cnpm–-gt-npm"><a href="#cnpm–-gt-npm" class="headerlink" title="cnpm–&gt;npm"></a>cnpm–&gt;npm</h2><p>终端输入:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://registry.npmjs.org</span><br></pre></td></tr></table></figure>
+<p>建议测试下是否切换成功，可以运用下方命令测试:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+<p>成功的话会显示<code>https://registry.npmjs.org/</code></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>npm</tag>
+        <tag>cnpm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>404</title>
     <url>//404.html</url>
     <content><![CDATA[]]></content>
