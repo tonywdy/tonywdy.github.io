@@ -153,72 +153,95 @@
 <p>解决方法就是去开启【任何来源】选项了，但是 macOS 默认是隐藏了这个设置的，需要用户手动通过终端执行命令行代码来开启。</p>
 <p>下面就让 MacWk.com 教大家使用命令行代码开启隐藏的任何来源选项。</p>
 <h2 id="开启任何来源（主要）"><a href="#开启任何来源（主要）" class="headerlink" title="开启任何来源（主要）"></a>开启任何来源（主要）</h2><p>先打开 <code>系统偏好设置 -&gt; 安全与隐私 -&gt; 通用</code> 选项卡，检查是否已经启用了 <code>任何来源</code> 选项。</p>
-<p><img width="700" height="581" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_34_25_543b44bbc2c94718a14d9d9e22afa99d.jpg"/></p>
-<p><img width="700" height="535" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_34_45_3bb4bd3504964e93bd9d732c29de1cc4.jpg"/></p>
+<img width="700" height="581" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_34_25_543b44bbc2c94718a14d9d9e22afa99d.jpg"/>
+
+<img width="700" height="535" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_34_45_3bb4bd3504964e93bd9d732c29de1cc4.jpg"/>
+
 <p>如果没有这个选项，复制以下面的命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo spctl --master-disable</span><br></pre></td></tr></table></figure>
+
 <p>打开<code>终端</code>：</p>
-<p><img width="700" height="475" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_7_b667d87b38ce40c9a692937fbca42649.jpg"/></p>
+<img width="700" height="475" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_7_b667d87b38ce40c9a692937fbca42649.jpg"/>
+
 <p>将刚刚复制的命令粘贴到终端中。</p>
-<p><img width="700" height="331" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_22_664f8062e22045999085a9165fa20e85.jpg"/></p>
+<img width="700" height="331" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_22_664f8062e22045999085a9165fa20e85.jpg"/>
+
 <p>然后按下键盘的回车键（return）</p>
-<p><img width="700" height="336" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_25_f4f56bbc92d840bba997e02f8918ada3.jpg"/></p>
+<img width="700" height="336" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_25_f4f56bbc92d840bba997e02f8918ada3.jpg"/>
+
 <p>输入密码</p>
-<p><img width="700" height="333" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_28_fd15f5a684d346db90f733296a7d0044.jpg"/></p>
+<img width="700" height="333" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_28_fd15f5a684d346db90f733296a7d0044.jpg"/>
+
 <p>恭喜您，<code>您已成功开启任何来源</code>。</p>
 <p>如果你是在 MacWk 安装软件的时候出现了下图的这个提示：</p>
-<p><img width="700" height="513" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_31_073ebc58648745fd8797c755c85e3d54.jpg"/></p>
+<img width="700" height="513" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_31_073ebc58648745fd8797c755c85e3d54.jpg"/>
+
 <p>在开启任何来源后，只需要在 Dmg 安装包界面的空白处右键，然后点击推出，再重新运行一下 DMG 安装包就可以正常安装啦，如下图：</p>
-<p><img width="700" height="523" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_34_e27af8991cb54f3e9d09d270ac9bc325.jpg"/></p>
+<img width="700" height="523" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_34_e27af8991cb54f3e9d09d270ac9bc325.jpg"/>
+
 <p>到这里一般情况下 85% 的应用都可以安装运行了。</p>
 <p>然而有的应用开启了任何来源还是不行，这是因为苹果进一步收缩了对未签名应用的权限，这时候就需要过终端执行命令行代码来绕过应用签名认证啦。下面 MacWk.com 就教大家通过命令绕过苹果的公证 Gatekeeper。</p>
 <p>来，让我们继续往下看。</p>
 <hr>
 <h2 id="绕过公证（扩展）"><a href="#绕过公证（扩展）" class="headerlink" title="绕过公证（扩展）"></a>绕过公证（扩展）</h2><p>打开终端，输入以下命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo xattr -rd com.apple.quarantine /Applications/xxxxxx.app</span><br></pre></td></tr></table></figure>
+
 <p>将上面的 <code>xxxxxx</code>.app 换成你的App名称，比如 <code>Sketch.app</code></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo xattr -rd com.apple.quarantine /Applications/Sketch.app</span><br></pre></td></tr></table></figure>
+
 <p>或者复制以下命令粘贴到终端后</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo xattr -rd com.apple.quarantine </span><br></pre></td></tr></table></figure>
+
 <p>打开Finder（访达），点击左侧的 <code>应用程序</code>，将应用拖进终端中，然后按键盘的回车键（return），输入密码，再按回车键，完成。</p>
 <blockquote>
 <p>注意 <code>quarantine</code> 后面必须有个空格</p>
 </blockquote>
-<p><img width="700" height="293" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_38_a4a396c8e50b4115b00f5ec17e64ca49.jpg"/></p>
+<img width="700" height="293" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_38_a4a396c8e50b4115b00f5ec17e64ca49.jpg"/>
+
 <p>好了再看一下是不是可以打开APP了！到这里一般情况下 90% 的应用都可以安装运行了（在 MacWk 下载安装的几乎不会有这种情况）</p>
 <p>如果还不行，那就需要对应用进行本地签名操作了！</p>
 <h2 id="应用签名（扩展）"><a href="#应用签名（扩展）" class="headerlink" title="应用签名（扩展）"></a>应用签名（扩展）</h2><ol>
-<li>安装Command Line Tools 工具</li>
+<li> 安装Command Line Tools 工具</li>
 </ol>
 <p>打开终端工具输入如下命令：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
-<p><img width="700" height="343" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_41_857477bcef8943be84edb2d21feb52a4.jpg"/></p>
-<ol>
-<li><p>弹出安装窗口后选择<code>继续安装</code>，安装过程需要几分钟，请耐心等待。如果安装的时候提示“不能安装该软件，因为当前无法从软件更新服务器获得”，请按这篇教程操作：<a target="_blank" rel="noopener" href="https://www.macwk.com/article/macos-command-line-tools-cannot-be-installed">点我查看</a></p>
+
+<img width="700" height="343" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_41_857477bcef8943be84edb2d21feb52a4.jpg"/>
+
+<ol start="2">
+<li><p> 弹出安装窗口后选择<code>继续安装</code>，安装过程需要几分钟，请耐心等待。如果安装的时候提示“不能安装该软件，因为当前无法从软件更新服务器获得”，请按这篇教程操作：<a target="_blank" rel="noopener" href="https://www.macwk.com/article/macos-command-line-tools-cannot-be-installed">点我查看</a></p>
 </li>
-<li><p>打开终端工具输入并执行如下命令对应用签名：</p>
+<li><p> 打开终端工具输入并执行如下命令对应用签名：</p>
 </li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo codesign --force --deep --sign - (应用路径)</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>应用路径：打开访达（Finder），点击左侧导航栏的 <code>应用程序</code>，找到相关应用，将它拖进终端命令<code>-</code> 的后面，然后按下回车即可，注意最后一个 <code>-</code> 后面有一个空格。</p>
 </blockquote>
 <p><img width="700" height="375" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_44_a832aae8e9ba494da8161ab18ab362f9.jpg"/> <img width="700" height="286" src="resources/91af87db18b94d3f9ad2cf271ec74cf3.jpg"/><img width="700" height="397" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_35_53_11_18_35_50_d5c01268b7f645f88af0f77a4d856d48.jpg"/><img width="700" height="390" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_36_4_1c411bca591444569ee88b75b48ac4e4.jpg"/></p>
 <p>正常情况下只有一行提示，即成功：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/文件位置 : replacing existing signature</span><br></pre></td></tr></table></figure>
-<p><img width="700" height="399" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_36_10_155cce177e9e4baab42714e1f44c8039.jpg"/></p>
+
+<img width="700" height="399" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_36_10_155cce177e9e4baab42714e1f44c8039.jpg"/>
+
 <h5 id="如遇如下错误："><a href="#如遇如下错误：" class="headerlink" title="如遇如下错误："></a>如遇如下错误：</h5><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/文件位置 : replacing existing signature</span><br><span class="line">/文件位置 : resource fork,Finder information,or similar detritus not allowed</span><br></pre></td></tr></table></figure>
+
 <ol>
-<li>先在终端执行：</li>
+<li> 先在终端执行：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">xattr -cr /文件位置（直接将应用拖进去即可）</span><br></pre></td></tr></table></figure>
-<ol>
-<li>然后再次执行如下指令即可：</li>
+
+<ol start="2">
+<li> 然后再次执行如下指令即可：</li>
 </ol>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">codesign --force --deep --sign - /文件位置（直接将应用拖进去即可）</span><br></pre></td></tr></table></figure>
+
 <p>如果您嫌麻烦，您也可以下载 macwk.com 编写的 macOS小助手进行快速操作：</p>
-<p><img width="700" height="438" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_36_16_687fe6546b3340de80500bdf6d0b943d.jpg"/></p>
-<p><img width="64" height="64" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_36_20_7e122abf1e3047df994fe0f9fe562b25.png"/></p>
+<img width="700" height="438" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_36_16_687fe6546b3340de80500bdf6d0b943d.jpg"/>
+
+<img width="64" height="64" src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/11_18_36_20_7e122abf1e3047df994fe0f9fe562b25.png"/>
+
 <h3 id="macOS小助手"><a href="#macOS小助手" class="headerlink" title="macOS小助手"></a><a target="_blank" rel="noopener" href="https://macwk.com/soft/macos-assistant-macwk">macOS小助手</a></h3><p>macOS常用命令快速执行</p>
 <p><a target="_blank" rel="noopener" href="https://macwk.com/soft/macos-assistant-macwk">免费下载</a></p>
 <p>到这儿，百分之九十五的应用都可以正常运行了。如果还不行，请继续往下看。</p>
@@ -314,7 +337,7 @@ chatBtnFn()
     <style></style> <script data-pjax>if(document.getElementById('recent-posts') && location.pathname =='/'){
     
     var parent = document.getElementById('recent-posts');
-    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic3.zhimg.com%2Fv2-7a34ff25f21f7bd6221c640a2a6914a6_r.jpg&refer=http%3A%2F%2Fpic3.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1659751938&t=c84fa1255e36a2543dc4d66a62b7df62" alt="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic3.zhimg.com%2Fv2-7a34ff25f21f7bd6221c640a2a6914a6_r.jpg&refer=http%3A%2F%2Fpic3.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1659751938&t=c84fa1255e36a2543dc4d66a62b7df62"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-07-11</span><a class="blog-slider__title" href="2022/07/11/百度上传图片API插件说明/">百度上传图片API插件说明</a><div class="blog-slider__text">百度上传图片API插件说明</div><a class="blog-slider__button" href="2022/07/11/百度上传图片API插件说明/">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/13_7_27_58_20220713072757.png" alt="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/13_7_27_58_20220713072757.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-07-11</span><a class="blog-slider__title" href="2022/07/11/xxx.app 已损坏，无法打开，你应该将它移到废纸篓:打不开 xxx，因为它来自身份不明的开发者解决方法/">xxx.app 已损坏，无法打开，你应该将它移到废纸篓/打不开 xxx，因为它来自身份不明的开发者解决方法</a><div class="blog-slider__text">xxx.app 已损坏，无法打开，你应该将它移到废纸篓/打不开 xxx，因为它来自身份不明的开发者解决方法</div><a class="blog-slider__button" href="2022/07/11/xxx.app 已损坏，无法打开，你应该将它移到废纸篓:打不开 xxx，因为它来自身份不明的开发者解决方法/">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="https://www.helloimg.com/images/2022/07/15/ZcdZoE.png" alt="https://www.helloimg.com/images/2022/07/15/ZcdZoE.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-07-14</span><a class="blog-slider__title" href="2022/07/14/Hexo-admin如何增加文章配置项？自定义文章配置、在后台直接自定义封面/">Hexo-admin如何增加文章配置项？自定义文章配置、在后台直接自定义封面</a><div class="blog-slider__text">简单好用的 hexo 博客文章编辑器！</div><a class="blog-slider__button" href="2022/07/14/Hexo-admin如何增加文章配置项？自定义文章配置、在后台直接自定义封面/">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    var child = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms"><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic3.zhimg.com%2Fv2-7a34ff25f21f7bd6221c640a2a6914a6_r.jpg&refer=http%3A%2F%2Fpic3.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1659751938&t=c84fa1255e36a2543dc4d66a62b7df62" alt="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic3.zhimg.com%2Fv2-7a34ff25f21f7bd6221c640a2a6914a6_r.jpg&refer=http%3A%2F%2Fpic3.zhimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1659751938&t=c84fa1255e36a2543dc4d66a62b7df62"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-07-11</span><a class="blog-slider__title" href="2022/07/11/百度上传图片API插件说明/">百度上传图片API插件说明</a><div class="blog-slider__text">百度上传图片API插件说明</div><a class="blog-slider__button" href="2022/07/11/百度上传图片API插件说明/">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/13_7_27_58_20220713072757.png" alt="https://gitlab.com/KINGWDY/photobed/-/raw/main/pictures/2022/07/13_7_27_58_20220713072757.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-07-11</span><a class="blog-slider__title" href="2022/07/11/xxx.app 已损坏，无法打开，你应该将它移到废纸篓:打不开 xxx，因为它来自身份不明的开发者解决方法/">xxx.app 已损坏，无法打开，你应该将它移到废纸篓/打不开 xxx，因为它来自身份不明的开发者解决方法</a><div class="blog-slider__text">xxx.app 已损坏，无法打开，你应该将它移到废纸篓/打不开 xxx，因为它来自身份不明的开发者解决方法</div><a class="blog-slider__button" href="2022/07/11/xxx.app 已损坏，无法打开，你应该将它移到废纸篓:打不开 xxx，因为它来自身份不明的开发者解决方法/">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="https://gitlab.com/KINGWDY/photobed/-/raw/main/20220719143050.png" alt="https://gitlab.com/KINGWDY/photobed/-/raw/main/20220719143050.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-07-19</span><a class="blog-slider__title" href="2022/07/19/hexo-swiper-文章置顶插件/">hexo-swiper 文章置顶插件</a><div class="blog-slider__text">hexo-swiper 文章置顶插件</div><a class="blog-slider__button" href="2022/07/19/hexo-swiper-文章置顶插件/">详情</a></div></div><div class="blog-slider__item swiper-slide" style="width: 750px; opacity: 1; transform: translate3d(0px, 0px, 0px); transition-duration: 0ms"><div class="blog-slider__img"><img src="https://www.helloimg.com/images/2022/07/15/ZcdZoE.png" alt="https://www.helloimg.com/images/2022/07/15/ZcdZoE.png"/></div><div class="blog-slider__content"><span class="blog-slider__code">2022-07-14</span><a class="blog-slider__title" href="2022/07/14/Hexo-admin如何增加文章配置项？自定义文章配置、在后台直接自定义封面/">Hexo-admin如何增加文章配置项？自定义文章配置、在后台直接自定义封面</a><div class="blog-slider__text">简单好用的 hexo 博客文章编辑器！</div><a class="blog-slider__button" href="2022/07/14/Hexo-admin如何增加文章配置项？自定义文章配置、在后台直接自定义封面/">详情</a></div></div></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
     console.log('已挂载swiper')
     parent.insertAdjacentHTML("afterbegin",child)}
      </script>
