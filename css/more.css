@@ -1441,9 +1441,7 @@ html {
   }
 }
 
-#sidebar #menu-mask {
-  z-index: 1001;
-}
+
 
 #page-header.not-top-img:not(.nav-fixed) #nav {
   background: var(--heo-none);
@@ -1850,9 +1848,6 @@ i.fab {
   box-shadow: var(--heo-shadow-main);
 }
 
-.nav-fixed #nav a:hover {
-  background: var(--heo-main);
-}
 
 @media screen and (min-width:768px) {
   .menus_item:hover>a.site-page {
@@ -1869,25 +1864,9 @@ i.fab {
   box-shadow: var(--heo-shadow-main);
   }
 
-  .nav-fixed .menus_item:hover>a.site-page {
-  background-color: var(--heo-main);
-  }
 }
 
-@media screen and (max-width:768px) {
-  #sidebar #sidebar-menus .menus_items li .site-page:hover {
-  background: var(--heo-main);
-  color: var(--heo-white);
-  }
 
-  #sidebar #sidebar-menus .menus_items li .site-page span:hover {
-  color: var(--heo-white);
-  }
-
-  #sidebar #sidebar-menus {
-  z-index: 1001;
-  }
-}
 
 .nav-fixed #nav #site-name i {
   color: var(--heo-fontcolor);
@@ -2205,20 +2184,9 @@ a.darkmode_switchbutton {
   margin-bottom: 0;
 }
 
-#mobile-sidebar #mobile-sidebar-menus.open {
-  background: var(--heo-maskbg);
-}
 
 
 
-#sidebar #sidebar-menus .site-data {
-  margin: 1rem 0;
-  padding: .6rem .5rem;
-}
-
-#sidebar-menus>hr {
-  display: none;
-}
 
 
 #algolia-search .search-dialog .ais-hits--item.algolia-hit-item a {
@@ -4223,6 +4191,9 @@ div#author-info__sayhi {
   color: var(--heo-white);
 }
 
+
+
+
 #aside-content>.card-widget:first-child {
   transition: .3s;
   border: none;
@@ -4710,7 +4681,6 @@ span.post-meta-categories:hover a.post-meta-categories {
   display: flex;
   align-items: center;
 }
-
 @media screen and (max-width:768px) {
   #post-firstinfo .meta-firstline {
   margin-bottom: .4rem;

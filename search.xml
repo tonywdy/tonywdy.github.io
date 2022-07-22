@@ -7758,7 +7758,39 @@ SAONotify("secret","旅行者，告诉你个秘密，其实，小青是个......
   <entry>
     <title>about</title>
     <url>/about/index.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>我还没想好怎么写…</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><!-- https://www.bootcdn.cn/botui/ -->
+<p><link href="https://cdn.bootcss.com/botui/0.3.9/botui-theme-default.css" rel="stylesheet"></p>
+<link href="https://cdn.bootcss.com/botui/0.3.9/botui.min.css" rel="stylesheet">
+
+
+<!-- 因为vue和botui更新导至bug,现将对话移至js下的botui中配置 -->
+<div class="entry-content">
+  <div class="moe-mashiro" style="text-align:center; font-size: 50px; margin-bottom: 20px;">[KINGの小屋]</div>
+  <div id="hello-mashiro" class="popcontainer" style="min-height: 300px; padding: 2px 6px 4px;  border-radius: 10px;">
+    <center>
+    <p>
+    </p>
+    <h4>
+    与&nbsp;<ruby>
+    KINGWDY&nbsp;<rp>
+    （</rp>
+    <rt>
+    真（ま）白（しろ）</rt>
+    <rp>
+    ）</rp>
+    </ruby>
+    对话中...</h4>
+    <p>
+    </p>
+    </center>
+    <bot-ui></botui>
+  </div>
+</div>
+<!--<script src="https://cungudafa.gitee.io/js/botui.js></script>-->
+<script src="https://yqmmkingdom-github-io.vercel.app/js/botui.js"></script>
+<script>
+bot_ui_ini()
+</script>
 ]]></content>
   </entry>
   <entry>
