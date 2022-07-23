@@ -1,3 +1,10 @@
+function switchCommentBarrage(){
+    let commentBarrage = document.querySelector('.comment-barrage');
+    if(commentBarrage){
+        $(commentBarrage).toggle()
+    }
+}
+
 "use strict";
 
 function _createForOfIteratorHelper(e, t) {
@@ -408,3 +415,26 @@ $(document).unbind("keydown").bind("keydown", function(e) {
         }
         d && ($.mouseMoveShow(".usercm"), $.disabledContextMenu())
     });
+    
+function fly_to_top() {
+      btf.scrollToDest(0, 500);
+    }
+    window.addEventListener("scroll", function (event) {
+      var scrollTop =
+        document.documentElement.scrollTop ||
+        window.pageYOffset ||
+        document.body.scrollTop;
+      if (scrollTop > 56) {
+        document
+          .getElementById("doraemon_to_top")
+          .classList.add("doraemon_fixed");
+      } else {
+        document
+          .getElementById("doraemon_to_top")
+          .classList.remove("doraemon_fixed");
+      }
+    });
+var full_page = document.getElementsByClassName("full_page");
+    if (full_page.length != 0) {
+      full_page[0].style.background = "transparent";
+    }

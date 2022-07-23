@@ -14,9 +14,9 @@ const maxBarrage = 10;
 //每个弹幕的间隔时间
 const barrageTime = 1500;
 //我用的是Vercel部署，这里链接就是Vercel的链接，腾讯云的自己琢磨一下哈，应该也差不多
-const twikooUrl = "https://twikoo-bqktkw5rw-cifan-yk.vercel.app/";
+const twikooUrl = "https://twikoo-for-kingwdy.vercel.app";
 //token要手动获取（反正我是开发者工具里获取的，教程在下面
-const accessToken = "000111222333";
+const accessToken = "371ffead7e164aa79e0c3b99c397bfe5";
 const pageUrl = "/barrage/"
 
 
