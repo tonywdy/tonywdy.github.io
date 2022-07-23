@@ -296,12 +296,16 @@ h6 {
 
 h1#site-title {
   font-family: OldEnglish,sans-serif;
-  font-size: 55px!important;
+  font-size: 70px!important;
   font-weight: lighter;
 }
 
 #nav #site-name,#subtitle {
   font-size: 24px;
+}
+
+#nav #site-name {
+  display: none;
 }
 
 span.hide-content {
@@ -712,9 +716,6 @@ hr:before {
   font-size: 28px;
 }
 
-.search-dialog hr {
-  margin: 28px auto 8px;
-}
 
 ::selection {
   background: var(--hassan-cursor);
@@ -2799,9 +2800,6 @@ em {
     height: 410px!important;
   }
 
-  .card-widget,.recent-post-item,.search-dialog {
-    border-radius: 0!important;
-  }
 
   .recent-post-info {
     padding: 10px!important;
@@ -2882,11 +2880,6 @@ em {
 
   #page-header #site-title {
     font-size: 1.85em!important;
-  }
-
-  .search-dialog {
-    left: 0!important;
-    width: 100%!important;
   }
 
 
@@ -5185,7 +5178,9 @@ i.fab {
 
 }
 
-
+#nav #search-mask {
+ width: 24px;
+}
 
 
 
