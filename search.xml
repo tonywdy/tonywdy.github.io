@@ -8119,6 +8119,40 @@ SAONotify("secret","旅行者，告诉你个秘密，其实，小青是个......
       </tags>
   </entry>
   <entry>
+    <title>npm报错解决方法</title>
+    <url>/posts/b5252182/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote>
+<p>npm install 报: The package-lock.json file was created with an old version of npm<br>问题分析：你使用npm太新了</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm i npm@6 -g</span><br><span class="line">npm -v</span><br><span class="line">6.14.15</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>node-pre-gyp WARN Tried to download(404): <a href="https://fsevents-binaries.s3-us-west-2.amazonaws.com/v1.2">https://fsevents-binaries.s3-us-west-2.amazonaws.com/v1.2</a>.<br>出现以下错误的原因是 ：node-pre-gyp WARN Tried to download(404): <a href="https://fsevents-binaries.s3-us-west-2.amazonaws.com/v1.2.7/fse-v1.2.7-node-v83-darwin-x64.tar.gz">https://fsevents-binaries.s3-us-west-2.amazonaws.com/v1.2.7/fse-v1.2.7-node-v83-darwin-x64.tar.gz</a> 【下载失败，下载的路径记录在原有的package-lock.json，现在已打不开了，所有导致这样的错误】</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">把 node_modules 和 package-lock.json【会记录上一次每个包的具体信息，加上下载路径，而某个包的下载路径一旦失效,执行npm install就无法安装此包】全部删除掉，仅留下【package.json】即可，然后运行npm install 就正常了</span><br></pre></td></tr></table></figure>
+
+<p>问题背景:<br>使用【使用MAC】执行npm install 安装报错如下：<br><a href="https://raw.githubusercontents.com/tonywdy/CDN/main/nibc">去看看报错向</a></p>
+<blockquote>
+<p>npm WARN deprecated <a href="mailto:&#x74;&#97;&#114;&#64;&#x32;&#x2e;&#x32;&#46;&#50;">&#x74;&#97;&#114;&#64;&#x32;&#x2e;&#x32;&#46;&#50;</a>: This version of tar is no longer supported, and will not receive …<br>全局安装：<code>npm i -g create-react-app</code><br><img src="https://gitlab.com/KINGWDY/photobed/-/raw/main/20220723094116.png"><br>分析：tar版本过低，需要升级tar版本。<br>解决：<br>1.执行如下命令：</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install -g tar</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitlab.com/KINGWDY/photobed/-/raw/main/20220723094239.png"></p>
+<p>若依旧无效:<br><a href="https://blog.csdn.net/crazy123456789/article/details/123719928">创建react工程报错：npm WARN deprecated tar@2.2.2: This version of tar is no longer supported, and will not_mask哥的博客-CSDN博客</a></p>
+<p>2.首先确认Node &gt;= 14.0.0 and npm &gt;= 5.6<br><img src="https://gitlab.com/KINGWDY/photobed/-/raw/main/20220723094818.png"></p>
+<p>3.执行如下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npx create-react-app create-react-app </span><br></pre></td></tr></table></figure>
+<p><img src="https://gitlab.com/KINGWDY/photobed/-/raw/main/20220723094843.png"></p>
+<p><img src="https://gitlab.com/KINGWDY/photobed/-/raw/main/20220723094906.png" alt="这张图我忘截了，所以网上找了一个"></p>
+<p><code>npm install -g create-react-app</code>+<code>create-react-app my-app</code>=<code>npx create-react-app my-app</code></p>
+<blockquote>
+<p>这条命令会临时安装 create-react-app 包，命令完成后create-react-app 会删掉，不会出现在 global 中。下次再执行，还是会重新临时安装。</p>
+</blockquote>
+<blockquote>
+<p>拓展：<br>npx是npm5.2之后发布的一个命令,npx 会自动查找当前依赖包中的可执行文件，如果找不到，就会去 PATH 里找。如果依然找不到，就会帮你安装</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
     <title>404</title>
     <url>//404.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>]]></content>
