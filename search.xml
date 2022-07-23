@@ -8166,6 +8166,48 @@ SAONotify("secret","旅行者，告诉你个秘密，其实，小青是个......
       </tags>
   </entry>
   <entry>
+    <title>控制台输出字符画-程序员的浪漫</title>
+    <url>/posts/192d1d03/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote>
+<p>不知道友友们逛 B 站时有没有注意到它控制台输出的字符画（正经人逛 B 站谁会按 F12），看完我瞬间嘴角上扬数秒。字符画如彩蛋般的出现在眼前，还能丰富网站的维度，一个优秀的网站也许在某个不起眼的角落也能带给你惊喜。<br><img src="https://gitlab.com/KINGWDY/photobed/-/raw/main/20220723154647.png" alt="B站控制台输出"><br>食用教程前，建议先看一下《教程&amp;笔记常量申明》，且所有修改对缩进格式等有严格要求。本教程主要针对 Butterfly 主题博客网站，若是其它主题或非博客类网站，可以借鉴下思路，很简单。</p>
+</blockquote>
+<p>话不多说，let’s get started!</p>
+<h1 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h1><p>1.新建 JS 文件<Custom>.js，代码模板如下，懂 JS 的友友可以自定义改。<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="variable language_">window</span>.<span class="property">console</span>) &#123;</span><br><span class="line">  <span class="title class_">Function</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">makeMulti</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> l = <span class="keyword">new</span> <span class="title class_">String</span>(<span class="variable language_">this</span>);</span><br><span class="line">    l = l.<span class="title function_">substring</span>(l.<span class="title function_">indexOf</span>(<span class="string">&quot;/*&quot;</span>) + <span class="number">3</span>, l.<span class="title function_">lastIndexOf</span>(<span class="string">&quot;*/&quot;</span>));</span><br><span class="line">    <span class="keyword">return</span> l;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">let</span> string = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">我是字符画</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(string.<span class="title function_">makeMulti</span>());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>代码中我是字符画处用来放自定义字符画</p>
+</blockquote>
+<p>2.修改myblog\themes\butterfly_config.yml<br><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">inject:</span></span><br><span class="line">  <span class="attr">head:</span></span><br><span class="line">    <span class="comment"># - &lt;link rel=&quot;stylesheet&quot; href=&quot;/xxx.css&quot;&gt;</span></span><br><span class="line">  <span class="attr">bottom:</span></span><br><span class="line">    <span class="comment"># - &lt;script src=&quot;xxxx&quot;&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">+</span>	<span class="bullet">-</span> <span class="string">&lt;script</span> <span class="string">defer</span> <span class="string">type=&quot;text/javascript&quot;</span> <span class="string">src=&quot;&lt;FilePath_Custom.js&gt;&quot;&gt;&lt;/script&gt;</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>Hexo 三连后，再按下F12或Ctrl + Shift + C即可看到效果。<br><img src="https://gitlab.com/KINGWDY/photobed/-/raw/main/20220723154937.png" alt="帮HASSAN打个广告"></p>
+</blockquote>
+<h1 id="拓展"><a href="#拓展" class="headerlink" title="拓展"></a>拓展</h1><blockquote>
+<p>提供一些思路</p>
+</blockquote>
+<p>1.字符画下面可以继续添加一些自定义文字（在刚才新建的 JS 文件里继续加）<br><figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">    */ &#125;</span><br><span class="line">    console.log(string.makeMulti());</span><br><span class="line"><span class="addition">+	console.log(&quot;&lt;Custom&gt;&quot;);</span></span><br></pre></td></tr></table></figure><br>2.自定义控制台的字体样式<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;&lt;Custom&gt; %c &lt;Custom&gt;&quot;</span>, <span class="string">&quot;&lt;样式代码&gt;&quot;</span>);</span><br></pre></td></tr></table></figure><br>注意：样式代码只涉及<code>%c</code> 符号后的文字</p>
+<p>比如HASSAN控制台中<code>欢迎访问Hassan&#39;s Blog</code>的字体样式代码如下：<br><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;欢迎访问%cHassan&#x27;s Blog&quot;</span>, <span class="string">&quot;color:#1fc7b6;font-weight:bold&quot;</span>);</span><br></pre></td></tr></table></figure></p>
+<h1 id="可能出现的八阿哥"><a href="#可能出现的八阿哥" class="headerlink" title="可能出现的八阿哥"></a>可能出现的八阿哥</h1><p>如果你使用了 Gulp 压缩，记得把<Custom.js>文件排除掉，否则你的字符画会被当做注释清除。<br>修改myblog\gulpfile.js即可<br><figure class="highlight diff"><table><tr><td class="code"><pre><span class="line">//压缩js</span><br><span class="line">gulp.task(&#x27;compress&#x27;, () =&gt;</span><br><span class="line">  gulp.src([&#x27;./public/**/*.js&#x27;, &#x27;!./public/**/*.min.js&#x27;])</span><br><span class="line"><span class="addition">+ gulp.src([&#x27;./public/**/*.js&#x27;, &#x27;!./public/**/*.min.js&#x27;, &#x27;!./public/&lt;FilePath_Custom.js&gt;&#x27;])</span></span><br><span class="line">    .pipe(babel(&#123;</span><br><span class="line">      presets: [&#x27;@babel/preset-env&#x27;]</span><br><span class="line">    &#125;))</span><br><span class="line">    .pipe(uglify().on(&#x27;error&#x27;, function (e) &#123;</span><br><span class="line">      console.log(e)</span><br><span class="line">    &#125;))</span><br><span class="line">    .pipe(gulp.dest(&#x27;./public&#x27;))</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
+<h1 id="资源"><a href="#资源" class="headerlink" title="资源"></a>资源</h1><p>最后推荐上几个与字符画相关的网站 👇</p>
+<h2 id="生成字符画"><a href="#生成字符画" class="headerlink" title="生成字符画"></a>生成字符画</h2><blockquote>
+<p>根据文字生成字符画：<a href="http://patorjk.com/software/taag">http://patorjk.com/software/taag</a><br>根据图片生成字符画：</p>
+<ul>
+<li><a href="http://www.degraeve.com/img2txt.php">http://www.degraeve.com/img2txt.php</a></li>
+<li><a href="http://life.chacuo.net/convertphoto2char">http://life.chacuo.net/convertphoto2char</a></li>
+</ul>
+<p>根据流程图生成字符画：<a href="http://asciiflow.com/">http://asciiflow.com/</a></p>
+<h1 id="字符画素材"><a href="#字符画素材" class="headerlink" title="字符画素材"></a>字符画素材</h1><p><a href="http://fuhao.tuwenla.com/xiaowenzihui.html">小型符号图案、字符画大全</a><br>搜狗输入法自带颜文字，其中大颜板块都是字符画~（没想到吧，被大家忽视这么多年）~</p>
+</blockquote>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p><a href="https://hassanwong.top/posts/7a58550e/">https://hassanwong.top/posts/7a58550e/</a></p>
+]]></content>
+      <categories>
+        <category>hexo魔改</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>JS</tag>
+        <tag>字符画</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>404</title>
     <url>//404.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>]]></content>
