@@ -438,7 +438,3 @@ var full_page = document.getElementsByClassName("full_page");
     if (full_page.length != 0) {
       full_page[0].style.background = "transparent";
     }
-
-function refreshCache() {
-    if (confirm('是否确定刷新博文缓存')) location.reload(true)
-}
