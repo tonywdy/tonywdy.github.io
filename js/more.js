@@ -358,7 +358,7 @@ $(document).unbind("keydown").bind("keydown", function(e) {
 }), $("#loading-box").on("click", function() {
   document.getElementById("loading-box").classList.add("loaded")
 }), window.onkeydown = function(e) {
-  123 === e.keyCode && btf.snackbarShow("开发者模式已打开，请遵循GPL协议", !1, 3e3)
+  123 === e.keyCode && btf.snackbarShow("你是帮我调试还是在把我底裤啊！？", !1, 3e3)
 };
 
 <!--自定义右键-->
@@ -438,3 +438,7 @@ var full_page = document.getElementsByClassName("full_page");
     if (full_page.length != 0) {
       full_page[0].style.background = "transparent";
     }
+
+function refreshCache() {
+    if (confirm('是否确定刷新博文缓存')) location.reload(true)
+}

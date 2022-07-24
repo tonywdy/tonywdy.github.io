@@ -1,3 +1,17 @@
+#universe {
+    display: block;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
 :root {
   letter-spacing: .8px;
   --hassan-main: #1fc7b6;
@@ -296,7 +310,7 @@ h6 {
 
 h1#site-title {
   font-family: OldEnglish,sans-serif;
-  font-size: 70px!important;
+  font-size: 100px!important;
   font-weight: lighter;
 }
 
@@ -10891,6 +10905,10 @@ span.hexo-douban-pagenum {
 #heo-footer .footer-title {
   color: var(--heo-secondtext);
   font-size: .8rem;
+}
+
+#footer-banner-tips {
+  display: flex;
 }
 
 #footer-banner {
