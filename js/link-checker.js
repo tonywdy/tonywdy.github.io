@@ -11,7 +11,7 @@ async function checkLink(){
         //如果你的博客添加了Gitter聊天窗，请去掉下方注释
         if(link[i].href==="" /*|| link[i].className==="gitter-open-chat-button"*/)continue;
         if(!await checkLocalSite(link[i].href)){
-            link[i].href = "https://go.pai233.top/#"+window.btoa(link[i].href)
+            link[i].href = "go-jumper-taupe.vercel.app#"+window.btoa(link[i].href)
             //console.log("edit.")
         }
     }
@@ -28,9 +28,10 @@ async function checkLocalSite(url){
             original: domain
         }
         //console.log(domain)
-        if(domain.check==="go.pai233.top" || domain.original[0].split('/')[0]==="localhost:4000")return true;//将domain.check修改为根或二级域名，domain.original[0].split('/')[0]修改为本地测试页面
+        if(domain.check==="go-jumper-taupe.vercel.app" || domain.original[0].split('/')[0]==="localhost:4000")return true;//将domain.check修改为根或二级域名，domain.original[0].split('/')[0]修改为本地测试页面
         return false;
     }catch(err){
         return true;
     }
 }
+

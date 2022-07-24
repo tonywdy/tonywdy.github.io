@@ -242,71 +242,6 @@ h6 {
   }
 }
 
-#article-container h1 {
-  padding-left: 46px;
-}
-
-#article-container h2 {
-  padding-left: 44px;
-}
-
-#article-container h3 {
-  padding-left: 42px;
-}
-
-#article-container h4 {
-  padding-left: 38px;
-}
-
-#article-container h5 {
-  padding-left: 36px;
-}
-
-#article-container h6 {
-  padding-left: 36px;
-}
-
-#article-container h1:before {
-  content: "H1";
-  margin: -4px 0 0 -46px;
-  font-size: 25px;
-  color: var(--hassan-headline);
-}
-
-#article-container h2:before {
-  content: "H2";
-  margin: -4px 0 0 -44px;
-  font-size: 23px;
-  color: var(--hassan-headline);
-}
-
-#article-container h3:before {
-  content: "H3";
-  margin: -2px 0 0 -42px;
-  font-size: 21px;
-  color: var(--hassan-headline);
-}
-
-#article-container h4:before {
-  content: "H4";
-  margin: -1.4px 0 0 -38px;
-  font-size: 18px;
-  color: var(--hassan-headline);
-}
-
-#article-container h5:before {
-  content: "H5";
-  margin: -.4px 0 0 -36px;
-  font-size: 16px;
-  color: var(--hassan-headline);
-}
-
-#article-container h6:before {
-  content: "H6";
-  margin: -.4px 0 0 -36px;
-  font-size: 16px;
-  color: var(--hassan-headline);
-}
 
 h1#site-title {
   font-family: OldEnglish,sans-serif;
@@ -1862,9 +1797,6 @@ i.fa-fw.iconfont.icon-overseas {
   transition: .3s;
 }
 
-.gitcalendar:hover .contrib-column {
-  border-color: var(--hassan-main);
-}
 
 #post-comment>div.comment-head>div.comment-privacy {
   display: block;
@@ -2293,21 +2225,11 @@ em {
     margin: 0;
     border-radius: 0;
   }
-
-  #gitcalendar {
-    border-radius: 0;
-    border: none;
-  }
 }
 
 @media screen and (min-width:768px) and (max-width:1300px) {
   #notice {
     margin: 20px 15px 0 15px;
-  }
-
-  #gitcalendar {
-    margin: 20px 15px 0 15px;
-    width: calc(100% - 30px);
   }
 }
 
@@ -2315,10 +2237,6 @@ em {
   #banner-page {
     width: 100%;
     height: 100%;
-  }
-
-  #gitcalendar {
-    width: calc(100% - 370px);
   }
 
   #home_top {
@@ -2598,11 +2516,6 @@ em {
 }
 
 @media screen and (min-width:768px) {
-  .recent-post-item {
-    position: relative;
-    height: 230px!important;
-    overflow: hidden;
-  }
 
   #recent-posts span.post-meta-date {
     margin-right: 6px;
@@ -2611,22 +2524,6 @@ em {
 
   [data-theme=light] #recent-posts span.post-meta-date {
     color: #1f2d3d;
-  }
-
-  #recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap a.article-meta__tags {
-    margin-right: 6px;
-  }
-
-  [data-theme=light] #recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap a.article-meta__tags {
-    color: #1f2d3d;
-  }
-
-  #recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap a {
-    color: #ffffffe6;
-  }
-
-  #recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap {
-    width: 48%;
   }
 
   a.article-meta__categories {
@@ -2640,11 +2537,6 @@ em {
     border-right: var(--hassan-border);
     color: var(--hassan-fontcolor)!important;
     transition: .3s;
-  }
-
-  .recent-post-item:hover a.article-meta__categories {
-    border-bottom: var(--hassan-border-hover);
-    border-right: var(--hassan-border-hover);
   }
 
   a.article-meta__categories:hover,a.article-meta__tags:hover {
@@ -6062,9 +5954,7 @@ li.card-archive-list-item {
   }
 }
 
-.medium-zoom-overlay {
-  background: var(--heo-maskbg)!important;
-}
+
 
 #toggle-sidebar {
   bottom: 80px;
@@ -6447,30 +6337,7 @@ span.fund_name {
   background: var(--heo-red);
 }
 
-#loading-box .loading-bg {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: var(--heo-card-bg);
-  z-index: 1001;
-  opacity: 1;
-  transition: .3s;
-}
 
-#loading-box.loaded .loading-bg {
-  opacity: 0;
-  z-index: -1000;
-}
-
-#loading-box .loading-svg {
-  width: 50px;
-  margin: auto;
-  animation-duration: .3s;
-  animation-name: loadingAction;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
 
 @keyframes loadingAction {
   from {
@@ -8555,25 +8422,6 @@ details[open] summary {
   box-shadow: var(--heo-shadow-main);
 }
 
-#article-container a.fancybox {
-  border-bottom: 0;
-  padding: 0;
-  margin: auto;
-  display: block;
-  width: fit-content;
-}
-
-#article-container a.fancybox img {
-  cursor: pointer;
-}
-
-.site-card-avatar a.fancybox {
-  padding: 0!important;
-}
-
-#article-container a.fancybox:hover {
-  background: var(--heo-card-bg);
-}
 
 #article-container p {
   margin: 1rem 0;
